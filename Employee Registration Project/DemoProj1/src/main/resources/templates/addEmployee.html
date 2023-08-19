@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Register Employee</title>
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:300,500' rel='stylesheet' type='text/css'>
+
+
+
+
+<style>
+body, html{
+     height: 100%;
+ 	background-repeat: no-repeat;
+ 	background-color: #d3d3d3;
+ 	font-family: 'Raleway', Verdana;
+}
+
+.main{
+ 	margin-top: 70px;
+}
+.form-group{
+	margin-bottom: 15px;
+}
+
+
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+ 	background-color: #1C728A;
+    /* shadows and rounded borders */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+label{
+	margin-bottom: 15px;
+    font-size:18px;
+    color: #fff;
+}
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 330px;
+    padding: 40px 40px;
+
+}
+
+.login-button{
+	margin-top: 5px;
+}
+
+.iconbk{
+    background-color:#5BC0DE;
+}
+.formcontrolcls { 
+    padding: 9px; 
+    border: solid 1px #4B718B; 
+    outline: 0; 
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #9DDAEC), to(#FFFFFF)); 
+    background: -moz-linear-gradient(top, #FFFFFF, #9DDAEC 1px, #FFFFFF 25px); 
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+
+    } 
+</style>        
+</head>
+
+<body>
+
+		<div class="container">
+			<div class="row main">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<h1 class="title">Add Employee</h1>
+	               		<hr />
+	               	</div>
+	            </div> 
+				<div class="main-login main-center">
+					<form class="form-horizontal" method="post" th:action="@{/display}" th:modelAttribute="employee">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Name:</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon iconbk"><i class="fa fa-user-plus fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control formcontrolcls" name="name" id="name"  placeholder="Enter your Name here"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Age:</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon iconbk"><i class="fa fa-envelope-o fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control formcontrolcls" name="age" id="age"  placeholder="Enter your Age here"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Email:</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon iconbk"><i class="fa fa-user-secret fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control formcontrolcls" name="email" id="email"  placeholder="Enter your Email here"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Salary:</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon iconbk"><i class="fa fa-lock fa-lock " aria-hidden="true"></i></span>
+									<input type="text" class="form-control formcontrolcls" name="salary" id="salary"  placeholder="Enter your Salary here"/>
+								</div>
+							</div>
+						</div>
+
+						
+
+						<div class="form-group ">
+							<input type="submit" class="btn btn-info btn-lg btn-block login-button">
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
+
